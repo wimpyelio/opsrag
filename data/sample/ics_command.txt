@@ -1,0 +1,5 @@
+TITLE: FEMA Incident Command and Management
+SOURCE: https://www.fema.gov/sites/default/files/2020-07/fema_incident_management_and_support_keystone-Jan2011.pdf
+TOPIC: incident command system
+SECTION: Command and management
+The Incident Command System (ICS) is designed to manage incidents. Its management characteristics include modular organization, common terminology, a manageable span of control, unity of command, chain of command, incident action planning, and comprehensive resource management. These characteristics support a common understanding across organizations and jurisdictions.

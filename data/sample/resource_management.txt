@@ -1,0 +1,5 @@
+TITLE: NIMS Resource Management Summary
+SOURCE: https://preptoolkit.fema.gov/web/nims-toolkit
+TOPIC: resource management
+SECTION: Resource management
+NIMS includes resource management as one of its major components. Resource management provides a structured way for organizations to identify, organize, and coordinate resources before and during incidents. In the broader NIMS approach, shared systems and processes help multiple organizations work together using common operational practices.

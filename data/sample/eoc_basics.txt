@@ -1,0 +1,5 @@
+TITLE: FEMA EOC Basics
+SOURCE: https://www.fema.gov/emergency-managers/practitioners/plan
+TOPIC: emergency operations center
+SECTION: Purpose and setup
+An Emergency Operations Center (EOC) is a physical or virtual place where leaders and staff coordinate information and resources to support incident management. EOCs are established according to the needs of the jurisdiction or organization, so their layouts and operating arrangements can differ. The EOC supports coordination around incident activity; it is not described as a replacement for on-scene incident command.

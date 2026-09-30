@@ -1,0 +1,5 @@
+TITLE: FEMA Incident Action Planning Guide
+SOURCE: https://www.fema.gov/sites/default/files/2020-07/Incident_Action_Planning_Guide_Revision1_august2015.pdf
+TOPIC: incident action planning
+SECTION: Purpose
+The Incident Action Planning Guide describes a standardized process for incident action planning on FEMA incidents. The guide explains roles and responsibilities, provides a reference for incident management personnel, supports staffing and exercising, and informs training and course development. Its purpose is to promote effective incident operations through a common planning process.

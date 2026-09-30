@@ -1,0 +1,283 @@
+[
+  {
+    "id": "q001",
+    "question": "What is the role of an Emergency Operations Center?",
+    "reference_answer": "An EOC is a physical or virtual place where leaders and staff coordinate information and resources to support incident management.",
+    "relevant_chunks": [
+      "eoc_basics-c0001"
+    ]
+  },
+  {
+    "id": "q002",
+    "question": "Can an EOC be virtual?",
+    "reference_answer": "Yes. The EOC description supports a physical or virtual place for coordination.",
+    "relevant_chunks": [
+      "eoc_basics-c0001"
+    ]
+  },
+  {
+    "id": "q003",
+    "question": "What does EOC operations help establish and share?",
+    "reference_answer": "EOC operations can help establish, maintain, and share situational awareness.",
+    "relevant_chunks": [
+      "eoc_operations-c0001"
+    ]
+  },
+  {
+    "id": "q004",
+    "question": "How can an EOC support long incidents?",
+    "reference_answer": "It can support long-term operations and improve continuity.",
+    "relevant_chunks": [
+      "eoc_operations-c0001"
+    ]
+  },
+  {
+    "id": "q005",
+    "question": "What is ICS designed to manage?",
+    "reference_answer": "The Incident Command System is designed to manage incidents.",
+    "relevant_chunks": [
+      "ics_command-c0001"
+    ]
+  },
+  {
+    "id": "q006",
+    "question": "Name two ICS management characteristics related to organizational control.",
+    "reference_answer": "Two examples are unity of command and chain of command; ICS also uses modular organization and a manageable span of control.",
+    "relevant_chunks": [
+      "ics_command-c0001"
+    ]
+  },
+  {
+    "id": "q007",
+    "question": "Why does ICS use common terminology?",
+    "reference_answer": "Common terminology supports a common understanding across organizations and jurisdictions.",
+    "relevant_chunks": [
+      "ics_command-c0001"
+    ]
+  },
+  {
+    "id": "q008",
+    "question": "What is the purpose of FEMA's Incident Action Planning Guide?",
+    "reference_answer": "It promotes effective incident operations through a standardized incident action planning process.",
+    "relevant_chunks": [
+      "incident_action_planning-c0001"
+    ]
+  },
+  {
+    "id": "q009",
+    "question": "What does the Incident Action Planning Guide explain besides the planning process?",
+    "reference_answer": "It explains roles and responsibilities and serves as a reference for incident management personnel.",
+    "relevant_chunks": [
+      "incident_action_planning-c0001"
+    ]
+  },
+  {
+    "id": "q010",
+    "question": "How can incident action planning guidance support training?",
+    "reference_answer": "The guide informs training and course development and supports staffing and exercising.",
+    "relevant_chunks": [
+      "incident_action_planning-c0001"
+    ]
+  },
+  {
+    "id": "q011",
+    "question": "Is resource management part of NIMS?",
+    "reference_answer": "Yes. Resource management is one of the major components described in NIMS.",
+    "relevant_chunks": [
+      "resource_management-c0001"
+    ]
+  },
+  {
+    "id": "q012",
+    "question": "What does resource management provide during incidents?",
+    "reference_answer": "It provides a structured way to identify, organize, and coordinate resources before and during incidents.",
+    "relevant_chunks": [
+      "resource_management-c0001"
+    ]
+  },
+  {
+    "id": "q013",
+    "question": "What is the NECP?",
+    "reference_answer": "The National Emergency Communications Plan is a strategic plan for strengthening emergency communications capabilities and interoperability.",
+    "relevant_chunks": [
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q014",
+    "question": "What are the NECP goals?",
+    "reference_answer": "The goals include governance and leadership, planning and procedures, training and exercises, communications coordination, technology and infrastructure, and cybersecurity.",
+    "relevant_chunks": [
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q015",
+    "question": "Which NECP goal concerns cybersecurity?",
+    "reference_answer": "Cybersecurity is explicitly listed as one of the NECP goals.",
+    "relevant_chunks": [
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q016",
+    "question": "Who does the NECP support during incidents?",
+    "reference_answer": "It supports responders and partners who share information during incidents and planned events.",
+    "relevant_chunks": [
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q017",
+    "question": "What is the purpose of CISA's plain-language resource for public safety communications?",
+    "reference_answer": "It provides an approach for replacing ten codes with plain language so radio transmissions can be understood more easily across agencies.",
+    "relevant_chunks": [
+      "plain_language_comms-c0001"
+    ]
+  },
+  {
+    "id": "q018",
+    "question": "What communication practice does the ten-code guidance address?",
+    "reference_answer": "It addresses moving from ten codes to plain language in emergency response radio communication.",
+    "relevant_chunks": [
+      "plain_language_comms-c0001"
+    ]
+  },
+  {
+    "id": "q019",
+    "question": "What deployment scenarios are covered by the Initial Response Checklist?",
+    "reference_answer": "It covers basic EOC deployment, field or technical deployment, and Communications Unit deployment.",
+    "relevant_chunks": [
+      "initial_response_checklist-c0001"
+    ]
+  },
+  {
+    "id": "q020",
+    "question": "What does the Initial Response Checklist help personnel prepare to bring?",
+    "reference_answer": "It provides recommended items to bring during an emergency response.",
+    "relevant_chunks": [
+      "initial_response_checklist-c0001"
+    ]
+  },
+  {
+    "id": "q021",
+    "question": "What can the NIMS ICS Forms Booklet help create?",
+    "reference_answer": "The forms can be used to create Incident Action Plans and support other incident management documentation activities.",
+    "relevant_chunks": [
+      "ics_forms-c0001"
+    ]
+  },
+  {
+    "id": "q022",
+    "question": "What is the relationship between the ICS Forms Booklet and the Field Operations Guide?",
+    "reference_answer": "The ICS Forms Booklet is a companion to the NIMS ICS Field Operations Guide.",
+    "relevant_chunks": [
+      "ics_forms-c0001"
+    ]
+  },
+  {
+    "id": "q023",
+    "question": "Does the ICS Forms Booklet replace emergency operations plans or laws?",
+    "reference_answer": "No. It does not replace relevant emergency operations plans, laws, or ordinances.",
+    "relevant_chunks": [
+      "ics_forms-c0001"
+    ]
+  },
+  {
+    "id": "q024",
+    "question": "What does NIMS provide to organizations working together on incidents?",
+    "reference_answer": "NIMS provides shared vocabulary, systems, and processes for government, nongovernmental organizations, and private-sector partners to work together on incidents.",
+    "relevant_chunks": [
+      "nims_overview-c0001"
+    ]
+  },
+  {
+    "id": "q025",
+    "question": "Which areas are grouped in the NIMS Toolkit?",
+    "reference_answer": "The toolkit groups resources around doctrine and guidance, resource management, ICS, EOCs, training, and the Joint Information System.",
+    "relevant_chunks": [
+      "nims_overview-c0001"
+    ]
+  },
+  {
+    "id": "q026",
+    "question": "How do EOC operations help with information?",
+    "reference_answer": "They help provide access to essential information and simplify information analysis and verification.",
+    "relevant_chunks": [
+      "eoc_operations-c0001"
+    ]
+  },
+  {
+    "id": "q027",
+    "question": "How are EOCs and ICS different in the provided material?",
+    "reference_answer": "The EOC coordinates information and resources to support incident management, while ICS is designed to manage incidents using defined management characteristics.",
+    "relevant_chunks": [
+      "eoc_basics-c0001",
+      "ics_command-c0001"
+    ]
+  },
+  {
+    "id": "q028",
+    "question": "Which document focuses specifically on emergency communications interoperability and which focuses on incident action planning?",
+    "reference_answer": "The NECP focuses on emergency communications capabilities and interoperability, while the FEMA Incident Action Planning Guide focuses on the incident action planning process.",
+    "relevant_chunks": [
+      "emergency_communications-c0001",
+      "incident_action_planning-c0001"
+    ]
+  },
+  {
+    "id": "q029",
+    "question": "A responder needs both a coordination location and a communications plan. Which sources in this set address those topics?",
+    "reference_answer": "The FEMA EOC materials address the coordination role of an EOC, while the National Emergency Communications Plan addresses emergency communications capabilities and interoperability.",
+    "relevant_chunks": [
+      "eoc_basics-c0001",
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q030",
+    "question": "What does the public-safety guidance recommend instead of agency-specific coded phrases?",
+    "reference_answer": "It recommends clearer plain-language communication rather than reliance on agency-specific coded phrases.",
+    "relevant_chunks": [
+      "plain_language_comms-c0001"
+    ]
+  },
+  {
+    "id": "q031",
+    "question": "Which ICS characteristic helps keep organizational authority clear?",
+    "reference_answer": "Unity of command and chain of command are ICS characteristics that keep organizational authority clear.",
+    "relevant_chunks": [
+      "ics_command-c0001"
+    ]
+  },
+  {
+    "id": "q032",
+    "question": "What does an EOC help do with resources?",
+    "reference_answer": "An EOC helps coordinate information and resources and supports resource identification and assignment.",
+    "relevant_chunks": [
+      "eoc_operations-c0001"
+    ]
+  },
+  {
+    "id": "q033",
+    "question": "Which plan includes technology and infrastructure as a goal?",
+    "reference_answer": "The National Emergency Communications Plan includes technology and infrastructure as one of its goals.",
+    "relevant_chunks": [
+      "emergency_communications-c0001"
+    ]
+  },
+  {
+    "id": "q034",
+    "question": "What document would you consult for forms used to document incident operations?",
+    "reference_answer": "The NIMS ICS Forms Booklet is the provided document for forms used to support ICS documentation during incident operations.",
+    "relevant_chunks": [
+      "ics_forms-c0001"
+    ]
+  },
+  {
+    "id": "q035",
+    "question": "According to the provided documents, what is the exact inventory of every radio model used by every emergency service in the United States?",
+    "reference_answer": "The provided documents do not contain enough evidence to answer this question.",
+    "relevant_chunks": []
+  }
+]

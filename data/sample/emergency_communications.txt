@@ -1,0 +1,5 @@
+TITLE: National Emergency Communications Plan
+SOURCE: https://www.cisa.gov/national-emergency-communications-plan
+TOPIC: emergency communications
+SECTION: NECP goals
+The National Emergency Communications Plan (NECP) is a strategic plan for strengthening emergency communications capabilities and interoperability. Its goals include governance and leadership, planning and procedures, training and exercises, communications coordination, technology and infrastructure, and cybersecurity. The plan is intended to support responders and partners who share information during incidents and planned events.

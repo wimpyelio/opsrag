@@ -1,0 +1,5 @@
+TITLE: NIMS Overview
+SOURCE: https://preptoolkit.fema.gov/web/nims-toolkit
+TOPIC: NIMS
+SECTION: System overview
+The National Incident Management System (NIMS) provides shared vocabulary, systems, and processes for government, nongovernmental organizations, and private-sector partners to work together on incidents. The toolkit groups NIMS resources around doctrine and guidance, resource management, the Incident Command System, Emergency Operations Centers, training, and the Joint Information System. The approach is intended to support work across the whole community.

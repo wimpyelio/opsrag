@@ -1,0 +1,5 @@
+TITLE: FEMA EOC Operations
+SOURCE: https://www.fema.gov/sites/default/files/documents/fema_eoc-references-resources-tool_2.pdf
+TOPIC: emergency operations center
+SECTION: Operations
+EOC operations can help establish, maintain, and share situational awareness. The FEMA reference describes EOCs as helping coordinate information and resources, support long-term operations, improve continuity, provide access to essential information, and simplify information analysis and verification. Resource identification and assignment are also part of the coordination role.

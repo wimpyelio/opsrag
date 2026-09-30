@@ -1,0 +1,9 @@
+Answer the question using the supplied context.
+
+Context:
+{{CONTEXT}}
+
+Question:
+{{QUESTION}}
+
+Give a direct answer. Prefer information from the context. At the end, list the source labels you used.

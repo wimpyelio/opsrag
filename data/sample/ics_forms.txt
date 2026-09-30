@@ -1,0 +1,5 @@
+TITLE: NIMS ICS Forms Booklet
+SOURCE: https://apps.usfa.fema.gov/ax/sm/sm_0312.pdf
+TOPIC: incident command system
+SECTION: Forms and documentation
+The NIMS ICS Forms Booklet is intended to assist emergency response personnel with ICS documentation during incident operations. The forms can be used to create Incident Action Plans and support other incident management and documentation activities. The booklet is a companion to the NIMS ICS Field Operations Guide and does not replace relevant emergency operations plans, laws, or ordinances.

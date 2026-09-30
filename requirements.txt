@@ -1,0 +1,8 @@
+elasticsearch==9.5.1
+sentence-transformers==6.1.0
+streamlit>=1.50,<2
+pandas>=2.2,<3
+python-dotenv==1.2.3
+pypdf>=6,<7
+ollama==0.6.2
+pytest>=8,<10

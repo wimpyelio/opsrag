@@ -1,0 +1,5 @@
+TITLE: Initial Response Checklist
+SOURCE: https://www.cisa.gov/safecom/planning-resources
+TOPIC: emergency response
+SECTION: Initial response
+CISA provides an Initial Response Checklist for Statewide Interoperability Coordinators and related public safety deployments. The checklist recommends items to bring during an emergency response and covers scenarios such as basic Emergency Operations Center deployment, field or technical deployment, and Communications Unit deployment. A condensed version is also described for printing and carrying during response work.

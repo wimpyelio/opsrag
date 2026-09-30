@@ -1,0 +1,5 @@
+TITLE: Plain Language for Public Safety Communications
+SOURCE: https://www.cisa.gov/safecom/planning-resources
+TOPIC: public safety communications
+SECTION: Plain language
+CISA SAFECom planning resources include guidance on moving from ten codes to plain language for emergency response radio communication. The resource focuses on an approach that states and localities can use to make radio transmissions easier to understand across agencies. The aim is clearer communication during emergency response rather than reliance on agency-specific coded phrases.
