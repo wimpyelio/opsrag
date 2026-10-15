@@ -116,11 +116,28 @@ def search_hybrid(query: str, top_k: int = 5, client: Any | None = None) -> list
             client.close()
 
 
+_METHOD_MAP: dict[str, Any] = {}  # populated below after function definitions
+
+
 def retrieve(query: str, method: str, top_k: int = 5, client: Any | None = None) -> list[dict[str, Any]]:
-    if method == "BM25":
-        return search_bm25(query, top_k, client=client)
-    if method == "Vector":
-        return search_vector(query, top_k, client=client)
-    if method == "Hybrid":
-        return search_hybrid(query, top_k, client=client)
-    raise ValueError(f"Unknown retrieval method: {method}")
+    """Dispatch to the appropriate search function.
+
+    ``method`` is matched case-insensitively so callers may pass
+    ``"bm25"``, ``"BM25"``, or ``"Bm25"`` interchangeably.
+    Valid values: BM25 · Vector · Hybrid.
+    """
+    fn = _METHOD_MAP.get(method.strip().lower())
+    if fn is None:
+        raise ValueError(
+            f"Unknown retrieval method: {method!r}. Valid values: BM25, Vector, Hybrid."
+        )
+    return fn(query, top_k, client=client)
+
+
+_METHOD_MAP.update(
+    {
+        "bm25": search_bm25,
+        "vector": search_vector,
+        "hybrid": search_hybrid,
+    }
+)

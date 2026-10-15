@@ -53,17 +53,26 @@ def main() -> None:
     }
     summaries: list[dict] = []
     for label, (method, prompt_name) in experiments.items():
+        print(f"[{label}] method={method}  prompt={prompt_name}  questions={len(questions)}")
         client = get_client()
         try:
             rows: list[dict] = []
-            for item in questions:
+            for idx, item in enumerate(questions, start=1):
                 result = answer_question(
                     item["question"],
                     method,
                     prompt_name=prompt_name,
                     es_client=client,
                 )
-                rows.append(evaluate_item(item, result["retrieved_chunks"], result["answer"]))
+                row = evaluate_item(item, result["retrieved_chunks"], result["answer"])
+                rows.append(row)
+                print(
+                    f"  {idx:>3}/{len(questions)}  {item['id']}  "
+                    f"recall={row['recall_at_5'] or 'n/a':>6}  "
+                    f"f1={row['answer_correctness']:.3f}  "
+                    f"cite={row['citation_coverage']:.2f}  "
+                    f"[{row['failure_category']}]"
+                )
         finally:
             if hasattr(client, "close"):
                 client.close()
@@ -79,7 +88,20 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(summaries)
 
-    print(f"Evaluated {len(questions)} questions for each experiment; metrics are in results/.")
+    # Print summary table to stdout so results are visible without opening CSV files.
+    col_w = 22
+    metric_keys = ["Recall@5", "MRR", "Answer Correctness", "Citation Coverage"]
+    header = f"{'Experiment':<14}" + "".join(f"{k:>{col_w}}" for k in metric_keys)
+    print()
+    print(header)
+    print("-" * len(header))
+    for row in summaries:
+        line = f"{row['experiment']:<14}" + "".join(
+            f"{row[k]:>{col_w}.4f}" for k in metric_keys
+        )
+        print(line)
+    print()
+    print(f"Full per-question results: results/baseline.csv · results/improved.csv")
 
 
 if __name__ == "__main__":

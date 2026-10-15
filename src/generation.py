@@ -45,13 +45,20 @@ def _source_labels(results: list[dict[str, Any]]) -> list[str]:
 
 
 def _ensure_source_citations(answer: str, results: list[dict[str, Any]]) -> str:
-    """Ensure exact source labels are exposed in the final answer."""
+    """Ensure exact source labels are present somewhere in the final answer.
+
+    Uses a case-insensitive membership check (matching citation_coverage) so
+    labels already embedded in answer prose are not duplicated in a Sources block.
+    If any label is absent the full Sources block is written (or extended).
+    """
     if not results:
         return answer
 
     labels = _source_labels(results)
-    missing = [label for label in labels if label not in answer]
-    if not missing and "Sources:" in answer:
+    answer_lower = answer.lower()
+    missing = [label for label in labels if label.lower() not in answer_lower]
+    if not missing:
+        # Every label is already present in the answer body; nothing to add.
         return answer
 
     body = answer.rstrip()

@@ -1,3 +1,5 @@
+import pytest
+
 from src import retrieval
 
 
@@ -65,3 +67,63 @@ def test_owned_client_is_closed_when_search_fails(monkeypatch):
         raise AssertionError("expected search failure")
 
     assert client.closed is True
+
+
+# ── New tests added after stress-test findings ────────────────────────────────
+
+
+@pytest.mark.parametrize("method", ["bm25", "BM25", "Bm25", "BM25 "])
+def test_retrieve_is_case_insensitive_for_bm25(method, monkeypatch):
+    """BUG-4 fix: retrieve() must not require exact capitalisation."""
+    client = FakeClient({"hits": {"hits": []}})
+    monkeypatch.setattr(retrieval, "get_client", lambda: client)
+    results = retrieval.retrieve("query", method, client=client)
+    assert isinstance(results, list)
+
+
+@pytest.mark.parametrize("method", ["vector", "Vector", "VECTOR"])
+def test_retrieve_is_case_insensitive_for_vector(method, monkeypatch):
+    monkeypatch.setattr(retrieval, "embed_query", lambda _: [0.1])
+    client = FakeClient({"hits": {"hits": []}})
+    results = retrieval.retrieve("query", method, client=client)
+    assert isinstance(results, list)
+
+
+@pytest.mark.parametrize("method", ["hybrid", "Hybrid", "HYBRID"])
+def test_retrieve_is_case_insensitive_for_hybrid(method, monkeypatch):
+    monkeypatch.setattr(retrieval, "embed_query", lambda _: [0.1])
+    client = FakeClient({"hits": {"hits": []}})
+    results = retrieval.retrieve("query", method, client=client)
+    assert isinstance(results, list)
+
+
+def test_retrieve_unknown_method_raises_value_error():
+    client = FakeClient({"hits": {"hits": []}})
+    with pytest.raises(ValueError, match="Unknown retrieval method"):
+        retrieval.retrieve("query", "FuzzySearch", client=client)
+
+
+def test_format_hits_returns_empty_list_for_empty_response():
+    assert retrieval._format_hits({}) == []
+    assert retrieval._format_hits({"hits": {}}) == []
+    assert retrieval._format_hits({"hits": {"hits": []}}) == []
+
+
+def test_vector_num_candidates_is_floored_at_top_k(monkeypatch):
+    """When top_k exceeds vector_num_candidates the kNN request must use top_k."""
+    monkeypatch.setattr(retrieval, "embed_query", lambda _: [0.1, 0.2])
+    client = FakeClient({"hits": {"hits": []}})
+    retrieval.search_vector("query", top_k=30, client=client)
+    knn = client.calls[0]["knn"]
+    assert knn["num_candidates"] == 30, (
+        "num_candidates should be max(settings.vector_num_candidates, top_k)"
+    )
+
+
+def test_hybrid_num_candidates_also_floored(monkeypatch):
+    monkeypatch.setattr(retrieval, "embed_query", lambda _: [0.1])
+    client = FakeClient({"hits": {"hits": []}})
+    retrieval.search_hybrid("query", top_k=30, client=client)
+    rrf = client.calls[0]["retriever"]["rrf"]
+    knn = rrf["retrievers"][1]["knn"]
+    assert knn["num_candidates"] == 30

@@ -25,14 +25,22 @@ class Document:
 
 
 def _parse_text_metadata(path: Path, raw_text: str) -> Document:
-    """Read optional TITLE/SOURCE/TOPIC/SECTION headers from a text source."""
+    """Read optional TITLE/SOURCE/TOPIC/SECTION headers from a text source.
+
+    Header lines must appear before any non-blank, non-header body line.
+    Blank lines between header lines are allowed and silently skipped.
+    """
     metadata: dict[str, str] = {}
     remaining: list[str] = []
     header_done = False
     for line in raw_text.splitlines():
-        match = re.match(r"^(TITLE|SOURCE|TOPIC|SECTION):\s*(.+)$", line.strip())
+        stripped = line.strip()
+        match = re.match(r"^(TITLE|SOURCE|TOPIC|SECTION):\s*(.+)$", stripped)
         if not header_done and match:
             metadata[match.group(1).lower()] = match.group(2).strip()
+            continue
+        if not header_done and stripped == "":
+            # Blank lines inside the header block are skipped, not treated as body.
             continue
         header_done = True
         remaining.append(line)
